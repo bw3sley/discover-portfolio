@@ -1,8 +1,158 @@
 :root {
     --body-bg-color: #22212C;
+    --border-color: #00FF00;
     --text-color: #837E9F;
     --bg-cards: #302F3D;
     --bg-techs: #CB92B1;
 
+
     --font-family: 'Merriweather Sans', sans-serif;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth; 
+}
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+
+    font-family: var(--font-family);
+
+    height: 100vh;
+}
+
+main .container {
+    max-width: 1360px;
+    width: 100%;
+
+    padding: 40px;
+
+    display: flex;
+
+    gap: 40px;
+}
+
+main .container .side-bar {
+    max-width: 348px;
+    width: 100%;
+
+    display: flex;
+    gap: 30px;
+
+    flex-direction: column;
+}
+
+main .container .side-bar .profile-card {
+    background-color: var(--bg-cards);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+
+    border-radius: 20px;
+}
+
+main .container .side-bar .profile-card img {
+    width: 128px;
+    height: 128px;
+
+    margin-bottom: 30px;
+
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+}
+
+main .container .side-bar .profile-card h2 {
+    margin-bottom: 10px;
+
+    font-size: 23px;
+}
+
+main .container .side-bar .profile-card p {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+main .container .side-bar .profile-socials {
+    width: 100%;
+
+    background-color: var(--bg-cards);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .container .side-bar .profile-socials p {
+    font-size: 13px;
+}
+
+
+main .container .side-bar .profile-techs {
+    width: 100%;
+
+    background-color: var(--bg-cards);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .container .side-bar .profile-techs h3 {
+    font-size: 20px;
+}
+
+main .container .side-bar .profile-techs .profile-techs-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 15px;
+}
+
+main .container .side-bar .profile-techs .profile-techs-content p {
+    background-color: var(--bg-techs);
+    color: var(--body-bg-color);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    border-radius: 30px;
+
+    padding: 4px;
+}
+
+main .container .side-bar .profile-experiences {
+    width: 100%;
+
+    background-color: var(--bg-cards);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
