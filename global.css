@@ -1,6 +1,6 @@
 :root {
     --body-bg-color: #22212C;
-    --border-color: #00FF00;
+    --border-color: #00ff00;
     --text-color: #837E9F;
     --bg-cards: #302F3D;
     --bg-techs: #CB92B1;
@@ -98,10 +98,16 @@ main .container .side-bar .profile-socials {
     gap: 20px;
 }
 
+main .container .side-bar .profile-socials .social {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
 main .container .side-bar .profile-socials p {
     font-size: 13px;
 }
-
 
 main .container .side-bar .profile-techs {
     width: 100%;
@@ -143,7 +149,7 @@ main .container .side-bar .profile-techs .profile-techs-content p {
     padding: 4px;
 }
 
-main .container .side-bar .profile-experiences {
+main .container .side-bar .profile-experiences, main .container .side-bar .profile-education {
     width: 100%;
 
     background-color: var(--bg-cards);
@@ -155,4 +161,27 @@ main .container .side-bar .profile-experiences {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+main .container .side-bar .profile-experiences .profile-experiences-content .profile-experiences-list, main .container .side-bar .profile-education .profile-education-content .profile-education-list {
+    margin-bottom: 1rem;
+}
+
+main .container .side-bar .profile-experiences .profile-experiences-content ul, main .container .side-bar .profile-education .profile-education-content ul {
+    margin-left: 40px;
+}
+
+main .container .side-bar .profile-experiences .profile-experiences-content ul li, main .container .side-bar .profile-education .profile-education-content ul li {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+main .container .side-bar .profile-experiences .profile-experiences-content ul p, main .container .side-bar .profile-education .profile-education-content ul p {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+main .container .side-bar .profile-experiences .profile-experiences-content ul p.profile-experiences-title, main .container .side-bar .profile-education .profile-education-content ul p.profile-education-title {
+    font-size: 12px;
+    font-weight: 600;
 }
