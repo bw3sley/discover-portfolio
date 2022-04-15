@@ -47,3 +47,18 @@ function GetUserCompany() {
 }
 
 GetUserCompany();
+
+function GetUserName() {
+    axios.get(url, {
+        headers: {
+            'Authorization': `token ${token}`
+        }
+    })
+    .then(response => {
+        const data = response.data.name;
+        const userName = document.querySelector("h2#user-name").textContent = data;
+    })
+    .catch(error => alert(`Error: ${error}`))
+}
+
+GetUserName();
