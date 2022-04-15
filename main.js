@@ -21,12 +21,11 @@ GetUserImage();
 function GetUserLocation() {
     axios.get(url, {
         headers: {
-            'Authorization': `token ${token}` 
+            'Authorization': `token ${token}`
         }
     })
     .then(response => {
         const data = response.data.location;
-
         const userLocation = document.querySelector("p#user-location").textContent = data
     })
     .catch(error => alert(`Error: ${error}`))
