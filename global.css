@@ -30,14 +30,14 @@ body {
 }
 
 main .container {
-    max-width: 1360px;
+    max-width: 1920px;
     width: 100%;
 
     padding: 40px;
 
     display: flex;
 
-    gap: 40px;
+    gap: 60px;
 }
 
 main .container .side-bar {
@@ -185,3 +185,139 @@ main .container .side-bar .profile-experiences .profile-experiences-content ul p
     font-size: 12px;
     font-weight: 600;
 }
+
+main .container .content {
+    width: 100%;
+
+    display: flex;
+    gap: 30px;
+
+    flex-direction: column;
+}
+
+main .container .content .title, main .container .content .subtitle {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px;
+
+    background-color: var(--bg-cards);
+
+    border-radius: 20px;
+}
+
+main .container .content .profile-projects {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+}
+
+main .container .content .profile-projects .project-wrapper {
+    max-width: 461px;
+    width: 100%;
+
+    background-color: var(--bg-cards);
+
+    border-radius: 30px;
+
+    padding: 30px;
+}
+
+main .container .content .profile-projects .project-wrapper .project-title {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+}
+
+main .container .content .profile-projects .project-wrapper .project-body {
+    margin: 20px 0 20px 0;
+    font-size: 14px;
+}
+
+main .container .content .profile-projects .project-wrapper .project-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 14px;
+}
+
+main .container .content .profile-projects .project-wrapper .project-footer .project-status {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+main .container .content .profile-projects .project-wrapper .project-footer .project-status .project-stars, main .container .content .profile-projects .project-wrapper .project-footer .project-status .project-forks {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+main .container .content .profile-projects .project-wrapper .project-footer .project-status .project-stars img {
+    width: 20px;
+    height: 20px;
+}
+
+main .container .content .profile-projects .project-wrapper .project-footer .project-language {
+    display: flex;
+    align-items: center;
+
+    gap: .5rem;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+
+    background-color: #E7DE79;
+
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+}
+
+main .container .content .posts {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 20px;
+
+    gap: 20px;
+    padding: 30px;
+
+    background-color: var(--bg-cards);
+
+    font-size: 14px;
+}
+
+main .container .content .posts img {
+    width: 128px;
+    height: 128px;
+
+    border-radius: 50%;
+}
+
+main .container .content .posts h1 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+main .container .content .posts .post-description {
+    margin-top: 28px;
+
+    font-size: 16px;
+}
+
+main .container .content .posts .post-techs {
+    display: flex;
+    gap: 10px;
+
+    margin: 12px 0 0 0;
+} 
