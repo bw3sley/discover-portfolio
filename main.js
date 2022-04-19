@@ -1,5 +1,5 @@
 const url = "https://api.github.com/users/bw3sley";
-const token = "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"
+const token = "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"
 
 function GetUserImage() {
     axios.get(url, {
@@ -41,7 +41,7 @@ function GetUserCompany() {
     })
     .then(response => {
         const data = response.data.company;
-        const userCompany = document.querySelector("p#user-company").textContent = data;
+        const userCompany = document.querySelector("a#user-company").textContent = data;
     })
     .catch(error => alert(`Error: ${error}`))
 }

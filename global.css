@@ -14,10 +14,11 @@
     padding: 0;
 
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 html {
-   scroll-behavior: smooth; 
+   scroll-behavior: smooth;
 }
 
 body {
@@ -105,9 +106,19 @@ main .container .side-bar .profile-socials .social {
     gap: 20px;
 }
 
-main .container .side-bar .profile-socials p {
+main .container .side-bar .profile-socials p, main .container .side-bar .profile-socials a {
     font-size: 13px;
+
+    color: var(--text-color);
+
+    transition: all 300ms;
+
+    cursor: pointer;
 }
+
+main .container .side-bar .profile-socials p:hover, main .container .side-bar .profile-socials a:hover {
+    opacity: .9;
+} 
 
 main .container .side-bar .profile-techs {
     width: 100%;
@@ -147,6 +158,14 @@ main .container .side-bar .profile-techs .profile-techs-content p {
     border-radius: 30px;
 
     padding: 4px;
+
+    transition: all 300ms;
+}
+
+main .container .side-bar .profile-techs .profile-techs-content p:hover {
+    opacity: .9;
+
+    cursor: default;
 }
 
 main .container .side-bar .profile-experiences, main .container .side-bar .profile-education {
@@ -207,6 +226,16 @@ main .container .content .title, main .container .content .subtitle {
     background-color: var(--bg-cards);
 
     border-radius: 20px;
+}
+
+main .container .content .title a {
+    color: var(--text-color);
+
+    transition: all 300ms;
+}
+
+main .container .content .title a:hover {
+    opacity: .7;
 }
 
 main .container .content .profile-projects {
