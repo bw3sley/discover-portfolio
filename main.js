@@ -1,5 +1,5 @@
 const url = "https://api.github.com/users/bw3sley";
-const token = "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"
+const token = "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"
 
 function GetUserImage() {
     axios.get(url, {
@@ -41,7 +41,7 @@ function GetUserCompany() {
     })
     .then(response => {
         const data = response.data.company;
-        const userCompany = document.querySelector("a#user-company").textContent = data;
+        const userCompany = document.querySelector("#user-company").textContent = data;
     })
     .catch(error => alert(`Error: ${error}`))
 }
@@ -71,7 +71,7 @@ function GetUserLogin() {
     })
     .then(response => {
         const data = response.data.login;
-        const userLogin = document.querySelector("p#user-github").textContent = data;
+        const userLogin = document.querySelector("a#user-github").textContent = data;
     })
     .catch(error => alert(`Error: ${error}`))
 }
