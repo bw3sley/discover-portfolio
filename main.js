@@ -1,5 +1,5 @@
 const url = "https://api.github.com/users/bw3sley";
-const token = "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"
+const token = "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"
 
 function GetUserImage() {
     axios.get(url, {
