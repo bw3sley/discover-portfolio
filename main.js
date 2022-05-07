@@ -1,79 +1,27 @@
 const url = "https://api.github.com/users/bw3sley";
-const token = "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"
+const token = "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";
 
-function GetUserImage() {
+function GetGitHubAPI(url, token) {
     axios.get(url, {
         headers: {
-            'Authorization': `token ${token}` 
+            "Authorization": `token ${token}`
         }
-      })
+    })
     .then(response => {
-        const data = response.data.avatar_url;
+        const avatar_url = response.data.avatar_url;
+        const location = response.data.location;
+        const company = response.data.company;
+        const name = response.data.name;
+        const login = response.data.login;
 
-        const userImageOne = document.querySelector("img#SideImages").setAttribute("src", data);
-        const userImageTwo = document.querySelector("img#PostImages").setAttribute("src", data);
+        document.querySelector("img#SideImages").setAttribute("src", avatar_url);
+        document.querySelector("img#PostImages").setAttribute("src", avatar_url);
+        document.querySelector("p#user-location").textContent = location;
+        document.querySelector("a#user-company").textContent = company;
+        document.querySelector("h2#user-name").textContent = name;
+        document.querySelector("a#user-github").textContent = login;
     })
     .catch(error => alert(`Error: ${error}`))
 }
 
-GetUserImage();
-
-function GetUserLocation() {
-    axios.get(url, {
-        headers: {
-            'Authorization': `token ${token}`
-        }
-    })
-    .then(response => {
-        const data = response.data.location;
-        const userLocation = document.querySelector("p#user-location").textContent = data;
-    })
-    .catch(error => alert(`Error: ${error}`))
-}
-
-GetUserLocation();
-
-function GetUserCompany() {
-    axios.get(url, {
-        headers: {
-            'Authorization': `token ${token}`
-        }
-    })
-    .then(response => {
-        const data = response.data.company;
-        const userCompany = document.querySelector("#user-company").textContent = data;
-    })
-    .catch(error => alert(`Error: ${error}`))
-}
-
-GetUserCompany();
-
-function GetUserName() {
-    axios.get(url, {
-        headers: {
-            'Authorization': `token ${token}`
-        }
-    })
-    .then(response => {
-        const data = response.data.name;
-        const userName = document.querySelector("h2#user-name").textContent = data;
-    })
-    .catch(error => alert(`Error: ${error}`))
-}
-
-GetUserName();
-
-function GetUserLogin() {
-    axios.get(url, {
-        headers: {
-            'Authorization': `token ${token}`
-        }
-    })
-    .then(response => {
-        const data = response.data.login;
-        const userLogin = document.querySelector("a#user-github").textContent = data;
-    })
-    .catch(error => alert(`Error: ${error}`))
-}
-
-GetUserLogin();
+GetGitHubAPI(url, token);
