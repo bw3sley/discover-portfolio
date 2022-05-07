@@ -1,5 +1,5 @@
 const url = "https://api.github.com/users/bw3sley";
-const token = "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";
+const token = "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";
 
 function GetGitHubAPI(url, token) {
     axios.get(url, {
@@ -25,3 +25,15 @@ function GetGitHubAPI(url, token) {
 }
 
 GetGitHubAPI(url, token);
+
+const scrollReveal = ScrollReveal({
+    origin: "top",
+    distance: "32px",
+    duration: 700,
+    reset: true
+});
+
+scrollReveal.reveal(
+    `main`
+    , { interval: 100 }
+);
