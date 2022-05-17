@@ -1,10 +1,11 @@
 :root {
-    --body-bg-color: #22212C;
-    --border-color: #00ff00;
-    --text-color: #837E9F;
-    --bg-cards: #302F3D;
-    --bg-techs: #CB92B1;
+    --body-bg-color: hsl(245, 14%, 15%);
+    --border-color: hsl(120, 100%, 50%);
+    --text-color: hsl(249, 15%, 56%);
+    --bg-cards: hsl(244, 13%, 21%);
+    --bg-techs: hsl(327, 35%, 68%);
 
+    --yellow: hsl(55, 70%, 69%);
 
     --font-family: 'Merriweather Sans', sans-serif;
 }
@@ -30,18 +31,51 @@ body {
     height: 100vh;
 }
 
-main .container {
+.title, .subtitle {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px;
+
+    background-color: var(--bg-cards);
+
+    border-radius: 20px;
+}
+
+.title a {
+    color: var(--text-color);
+
+    transition: all 300ms;
+}
+
+.title a:hover {
+    opacity: .7;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+
+    background-color: var(--yellow);
+
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+}
+
+.container {
     max-width: 1920px;
     width: 100%;
 
     padding: 40px;
+    gap: 60px;
 
     display: flex;
-
-    gap: 60px;
 }
 
-main .container .side-bar {
+.side-bar {
     max-width: 348px;
     width: 100%;
 
@@ -51,7 +85,16 @@ main .container .side-bar {
     flex-direction: column;
 }
 
-main .container .side-bar .profile-card {
+.content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    
+    gap: 30px;
+}
+
+.profile-card {
     background-color: var(--bg-cards);
 
     display: flex;
@@ -64,7 +107,7 @@ main .container .side-bar .profile-card {
     border-radius: 20px;
 }
 
-main .container .side-bar .profile-card img {
+.profile-card img {
     width: 128px;
     height: 128px;
 
@@ -74,18 +117,18 @@ main .container .side-bar .profile-card img {
     border: 2px solid var(--border-color);
 }
 
-main .container .side-bar .profile-card h2 {
+.profile-card h2 {
     margin-bottom: 10px;
 
     font-size: 23px;
 }
 
-main .container .side-bar .profile-card p {
+.profile-card p {
     font-size: 13px;
     font-weight: 300;
 }
 
-main .container .side-bar .profile-socials {
+.profile-socials {
     width: 100%;
 
     background-color: var(--bg-cards);
@@ -99,14 +142,14 @@ main .container .side-bar .profile-socials {
     gap: 20px;
 }
 
-main .container .side-bar .profile-socials .social {
+.profile-socials .social {
     display: flex;
     align-items: center;
 
     gap: 20px;
 }
 
-main .container .side-bar .profile-socials p, main .container .side-bar .profile-socials a {
+.profile-socials p, .profile-socials a {
     font-size: 13px;
 
     color: var(--text-color);
@@ -116,11 +159,11 @@ main .container .side-bar .profile-socials p, main .container .side-bar .profile
     cursor: pointer;
 }
 
-main .container .side-bar .profile-socials p:hover, main .container .side-bar .profile-socials a:hover {
+.profile-socials p:hover, .profile-socials a:hover {
     opacity: .7;
 } 
 
-main .container .side-bar .profile-techs {
+.profile-techs {
     width: 100%;
 
     background-color: var(--bg-cards);
@@ -134,18 +177,18 @@ main .container .side-bar .profile-techs {
     gap: 20px;
 }
 
-main .container .side-bar .profile-techs h3 {
+.profile-techs h3 {
     font-size: 20px;
 }
 
-main .container .side-bar .profile-techs .profile-techs-content {
+.profile-techs-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
     gap: 15px;
 }
 
-main .container .side-bar .profile-techs .profile-techs-content p {
+.profile-techs-content p {
     background-color: var(--bg-techs);
     color: var(--body-bg-color);
 
@@ -162,13 +205,13 @@ main .container .side-bar .profile-techs .profile-techs-content p {
     transition: all 300ms;
 }
 
-main .container .side-bar .profile-techs .profile-techs-content p:hover {
+.profile-techs-content p:hover {
     opacity: .7;
 
     cursor: default;
 }
 
-main .container .side-bar .profile-experiences, main .container .side-bar .profile-education {
+.profile-experiences, .profile-education {
     width: 100%;
 
     background-color: var(--bg-cards);
@@ -182,39 +225,30 @@ main .container .side-bar .profile-experiences, main .container .side-bar .profi
     gap: 20px;
 }
 
-main .container .side-bar .profile-experiences .profile-experiences-content .profile-experiences-list, main .container .side-bar .profile-education .profile-education-content .profile-education-list {
+.profile-experiences-list, .profile-education-list {
     margin-bottom: 1rem;
 }
 
-main .container .side-bar .profile-experiences .profile-experiences-content ul, main .container .side-bar .profile-education .profile-education-content ul {
+.profile-experiences-content ul, .profile-education-content ul {
     margin-left: 40px;
 }
 
-main .container .side-bar .profile-experiences .profile-experiences-content ul li, main .container .side-bar .profile-education .profile-education-content ul li {
+.profile-experiences-content ul li, .profile-education-content ul li {
     font-size: 14px;
     font-weight: 800;
 }
 
-main .container .side-bar .profile-experiences .profile-experiences-content ul p, main .container .side-bar .profile-education .profile-education-content ul p {
+.profile-experiences-content ul p, .profile-education-content ul p {
     font-weight: 400;
     font-size: 12px;
 }
 
-main .container .side-bar .profile-experiences .profile-experiences-content ul p.profile-experiences-title, main .container .side-bar .profile-education .profile-education-content ul p.profile-education-title {
-    font-size: 12px;
+.profile-experiences-content ul p.profile-experiences-title, .profile-education-content ul p.profile-education-title {
+    font-size: 13px;
     font-weight: 600;
 }
 
-main .container .content {
-    width: 100%;
-
-    display: flex;
-    gap: 30px;
-
-    flex-direction: column;
-}
-
-main .container .content .title, main .container .content .subtitle {
+.title, .subtitle {
     width: 100%;
 
     display: flex;
@@ -228,24 +262,24 @@ main .container .content .title, main .container .content .subtitle {
     border-radius: 20px;
 }
 
-main .container .content .title a {
+.title a {
     color: var(--text-color);
 
     transition: all 300ms;
 }
 
-main .container .content .title a:hover {
+.title a:hover {
     opacity: .7;
 }
 
-main .container .content .profile-projects {
+.profile-projects {
     display: flex;
     align-items: center;
 
     gap: 30px;
 }
 
-main .container .content .profile-projects .project-wrapper {
+.project-wrapper {
     max-width: 461px;
     width: 100%;
 
@@ -262,23 +296,23 @@ main .container .content .profile-projects .project-wrapper {
     border: 1px solid var(--bg-cards);
 }
 
-main .container .content .profile-projects .project-wrapper:hover {
+.project-wrapper:hover {
     border: 1px solid #00ff00;
 }
 
-main .container .content .profile-projects .project-wrapper .project-title {
+.project-title {
     display: flex;
     align-items: center;
 
     gap: 16px;
 }
 
-main .container .content .profile-projects .project-wrapper .project-body {
+.project-body {
     margin: 20px 0 20px 0;
     font-size: 14px;
 }
 
-main .container .content .profile-projects .project-wrapper .project-footer {
+.project-footer {
     display: flex;
 
     justify-content: space-between;
@@ -286,13 +320,13 @@ main .container .content .profile-projects .project-wrapper .project-footer {
     font-size: 14px;
 }
 
-main .container .content .profile-projects .project-wrapper .project-footer .project-status {
+.project-status {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-main .container .content .profile-projects .project-wrapper .project-footer .project-status .project-stars, main .container .content .profile-projects .project-wrapper .project-footer .project-status .project-forks {
+.project-stars, .project-forks {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -300,33 +334,23 @@ main .container .content .profile-projects .project-wrapper .project-footer .pro
     transition: all 300ms;
 }
 
-main .container .content .profile-projects .project-wrapper .project-footer .project-status .project-stars:hover, main .container .content .profile-projects .project-wrapper .project-footer .project-status .project-forks:hover {
+.project-stars:hover, .project-forks:hover {
     opacity: .7;
 }
 
-main .container .content .profile-projects .project-wrapper .project-footer .project-status .project-stars img, main .container .content .profile-projects .project-wrapper .project-footer .project-status .project-forks img {
+.project-stars img, .project-forks img {
     width: 20px;
     height: 20px;
 }
 
-main .container .content .profile-projects .project-wrapper .project-footer .project-language {
+.project-language {
     display: flex;
     align-items: center;
 
     gap: .5rem;
 }
 
-.circle {
-    width: 15px;
-    height: 15px;
-
-    background-color: #E7DE79;
-
-    border: 2px solid var(--text-color);
-    border-radius: 50%;
-}
-
-main .container .content .posts {
+.posts {
     width: 100%;
 
     display: flex;
@@ -342,25 +366,25 @@ main .container .content .posts {
     font-size: 14px;
 }
 
-main .container .content .posts img {
+.posts img {
     width: 128px;
     height: 128px;
 
     border-radius: 50%;
 }
 
-main .container .content .posts h1 {
+.posts h1 {
     font-size: 18px;
     font-weight: 800;
 }
 
-main .container .content .posts .post-description {
+.posts .post-description {
     margin-top: 28px;
 
     font-size: 16px;
 }
 
-main .container .content .posts .post-techs {
+.posts .post-techs {
     display: flex;
     gap: 10px;
 
